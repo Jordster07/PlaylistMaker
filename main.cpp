@@ -9,15 +9,15 @@ int main() {
     User user("Jordan");
 
     //making songs
-    Playlist chill("YKTV");
-    chill.addMedia(new Song("A New Kind of Love", 260, "Imogen Heap"));
-    chill.addMedia(new Song("End Now I See You", 208, "Kaiyko"));
+    Playlist* chill = new Playlist("YKTV");
+    chill->addMedia(new Song("A New Kind of Love", 260, "Imogen Heap"));
+    chill->addMedia(new Song("End Now I See You", 208, "Kaiyko"));
 
     //making podcasts
-    Playlist LockIn("Lock in");
-    LockIn.addMedia(new Podcast("Building Mental Resilience", 1500, "Michael Smoak"));
-    LockIn.addMedia(new Podcast("Habit Stacking for Better Health", 1300, "Michael Smoak"));
-    
+    Playlist* LockIn = new Playlist("Lock in");
+    LockIn->addMedia(new Podcast("Building Mental Resilience", 1500, "Michael Smoak"));
+    LockIn->addMedia(new Podcast("Habit Stacking for Better Health", 1300, "Michael Smoak"));
+
     //adding the playlist and podcast to Jordan
     user.addPlaylist(chill);
     user.addPlaylist(LockIn);

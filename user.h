@@ -8,11 +8,11 @@ using namespace std;
 class User {
 private:
     string username;
-    vector<Playlist> playlists;
-
+    std::vector<Playlist*> playlists;
 public:
+    void addPlaylist(Playlist* playlist);
+    ~User();
     User(string username);
-    void addPlaylist(const Playlist& playlist);
     void showPlaylists();
 };
 
